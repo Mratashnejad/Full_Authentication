@@ -1,10 +1,10 @@
-from django.urls import path , re_path
+from django.urls import path, re_path
 from .views import (
     CustomProviderAuthView,
     CustomTokenObtainPairView,
     CustomTokenRefreshView,
     CustomTokenVerifyView,
-    LogOutView,
+    LogoutView,
 )
 
 urlpatterns = [
@@ -13,8 +13,8 @@ urlpatterns = [
         CustomProviderAuthView.as_view(),
         name='provider-auth'
     ),
-    path('jwt/create/' , CustomTokenObtainPairView.as_view()),
-    path('jwt/refresh/' , CustomTokenRefreshView.as_view()),
+    path('jwt/create/', CustomTokenObtainPairView.as_view()),
+    path('jwt/refresh/', CustomTokenRefreshView.as_view()),
     path('jwt/verify/', CustomTokenVerifyView.as_view()),
-    path('logout/',LogOutView.as_view()),
+    path('logout/', LogoutView.as_view()),
 ]

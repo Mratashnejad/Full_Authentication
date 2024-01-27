@@ -11,7 +11,6 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView, #access token be valid
 )
 
-
 class CustomProviderAuthView(ProviderAuthView):
     def post(self , request , *args , **kwargs):
         response = super().post(request , *args , **kwargs , )
@@ -89,11 +88,8 @@ class CustomTokenRefreshView(TokenRefreshView):
                 secure   =settings.AUTH_COOKIE_SECURE,
                 httponly =settings.AUTH_COOKIE_HTTP_ONLY,
                 samesite =settings.AUTH_COOKIE_SAMESITE
-
             )
         return response
-    
-
 
 class CustomTokenVerifyView(TokenVerifyView):
     def post(self, request, *args, **kwargs):
@@ -105,7 +101,7 @@ class CustomTokenVerifyView(TokenVerifyView):
         return super().post(request, *args, **kwargs)
 
     
-class LogOutView(APIView):
+class LogoutView(APIView):
     def post(self, request, *args, **kwargs):
         response = Response(status=status.HTTP_204_NO_CONTENT)
         response.delete_cookie('access')
