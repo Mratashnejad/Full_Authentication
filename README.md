@@ -22,20 +22,24 @@ This project provides a comprehensive authentication system implemented using Dj
    ```bash
    git clone https://github.com/your-username/your-authentication-project.git
 
-Install Dependencies:
+## Install Dependencies:
+```bash
 pip install -r requirements.txt
+```
 
-Database Setup:
+## Database Setup:
 
 Ensure PostgreSQL is installed.
 Update database configurations in settings.py.
-Run migrations:
+## Run migrations:
+```bash
 python manage.py migrate
-
-Run the Development Server:
+```
+## Run the Development Server:
+```bash
 python manage.py runserver
-
-Social Media Authentication Setup:
+```
+## Social Media Authentication Setup:
 
 Follow the documentation for setting up Google and Facebook authentication.
 Update the corresponding API keys/secrets in your project.
@@ -44,10 +48,8 @@ Accessing the API:
 The API will be available at http://localhost:8000/.
 Explore the available endpoints for registration, login, and social media authentication using tools like Swagger.
 
-Contributing
+## Contributing
 Feel free to contribute to this project by opening issues or submitting pull requests. Your contributions are highly appreciated!
 
-License
-This project is licensed under the MIT License.
 
 Remember to customize the placeholders like `your-username` and `your-authentication-project` with your actual GitHub username and project name. Additionally, make sure to provide detailed instructions for setting up Google and Facebook authentication in your project.
